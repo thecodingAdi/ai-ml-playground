@@ -1,0 +1,269 @@
+/* ===================================
+   CUSTOM STREAMLIT STYLING
+   Heart Disease Prediction App
+   =================================== */
+
+/* Import a clean, professional font (medical/clinical feel) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* Main Container & Background */
+:root {
+    --primary-color: #FF6B6B;
+    --secondary-color: #4ECDC4;
+    --success-color: #2ECC71;
+    --danger-color: #E74C3C;
+    --warning-color: #F39C12;
+    --dark-bg: #1a1a1a;
+    --light-text: #FFFFFF;
+    --card-bg: #2d3436;
+    --accent-color: #4ECDC4;   /* replaces the old magenta accent everywhere below */
+}
+
+/* Apply base font across the app */
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Background Styling */
+[data-testid="stAppViewContainer"] {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+[data-testid="stMainBlockContainer"] {
+    background: transparent !important;
+}
+
+[data-testid="stVerticalBlock"] > div {
+    background: transparent !important;
+}
+
+[data-testid="stSidebar"] {
+    background-color: #2c3e50;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Title Styling */
+h1 {
+    font-family: 'Poppins', sans-serif !important;
+    color: #FF6B6B !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5) !important;
+    margin-bottom: 20px !important;
+    letter-spacing: 0.5px !important;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif !important;
+    color: #4ECDC4 !important;
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    margin-top: 25px !important;
+    margin-bottom: 15px !important;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif !important;
+    color: #95E1D3 !important;
+    font-size: 1.4rem !important;
+    font-weight: 500 !important;
+}
+
+/* Text & Markdown */
+p, [data-testid="stMarkdownContainer"] {
+    color: #ECF0F1 !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+}
+
+/* Slider Styling — now uses teal/secondary accent instead of magenta */
+[data-testid="stSlider"] {
+    padding: 15px 0 !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 8px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+[data-testid="stSlider"] input[type="range"] {
+    accent-color: #4ECDC4 !important;
+}
+
+[data-testid="stSlider"] input[type="range"]::-webkit-slider-thumb {
+    background-color: #4ECDC4 !important;
+    border: 2px solid #4ECDC4 !important;
+    box-shadow: 0 0 10px rgba(78, 205, 196, 0.6) !important;
+}
+
+[data-testid="stSlider"] input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #FF6B6B, #4ECDC4) !important;
+}
+
+[data-testid="stSlider"] input[type="range"]::-moz-range-thumb {
+    background-color: #4ECDC4 !important;
+    border: 2px solid #4ECDC4 !important;
+    box-shadow: 0 0 10px rgba(78, 205, 196, 0.6) !important;
+}
+
+[data-testid="stSlider"] input[type="range"]::-moz-range-track {
+    background: linear-gradient(to right, #FF6B6B, #4ECDC4) !important;
+}
+
+/* Slider numeric value labels (min/max/current) */
+[data-testid="stTickBarMin"],
+[data-testid="stTickBarMax"],
+[data-testid="stThumbValue"] {
+    color: #95E1D3 !important;
+    font-weight: 600 !important;
+}
+
+/* Selectbox & Input Styling */
+[data-testid="stSelectbox"],
+[data-testid="stTextInput"],
+[data-testid="stNumberInput"],
+[data-baseval-key] {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid #4ECDC4 !important;
+    border-radius: 8px !important;
+    color: #ECF0F1 !important;
+}
+
+[data-testid="stSelectbox"] *,
+[data-testid="stNumberInput"] * {
+    color: #ECF0F1 !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Button Styling */
+button[kind="primary"] {
+    font-family: 'Poppins', sans-serif !important;
+    background: linear-gradient(135deg, #FF6B6B 0%, #E74C3C 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 12px 30px !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4) !important;
+    transition: all 0.3s ease !important;
+}
+
+button[kind="primary"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(78, 205, 196, 0.5) !important;
+}
+
+button[kind="primary"]:active {
+    transform: translateY(0) !important;
+}
+
+/* Success & Error Messages */
+[data-testid="stAlert"] {
+    border-radius: 10px !important;
+    padding: 15px 20px !important;
+    font-size: 1.05rem !important;
+    border-left: 5px solid !important;
+    backdrop-filter: blur(10px) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Success Message */
+[data-testid="stAlert"] svg[stroke="#31333F"] + div {
+    background-color: rgba(46, 204, 113, 0.2) !important;
+    border-left-color: #2ECC71 !important;
+    color: #2ECC71 !important;
+}
+
+/* Error Message */
+[data-testid="stAlert"] svg[stroke="#E74C3C"] + div,
+[data-testid="stAlert"] svg + div {
+    background-color: rgba(231, 76, 60, 0.2) !important;
+    border-left-color: #E74C3C !important;
+    color: #FF6B6B !important;
+}
+
+/* Expander Styling */
+[data-testid="stExpander"] {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid #4ECDC4 !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+}
+
+[data-testid="stExpander"] > button {
+    font-weight: 600 !important;
+    color: #4ECDC4 !important;
+}
+
+/* Tables */
+[data-testid="stDataFrame"] {
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+/* Metric Cards */
+[data-testid="stMetric"] {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    border: 1px solid #4ECDC4 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Sidebar Text */
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] label {
+    color: #ECF0F1 !important;
+}
+
+/* Labels */
+label {
+    font-family: 'Inter', sans-serif !important;
+    color: #95E1D3 !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+}
+
+/* General Container Styling */
+[data-testid="stVerticalBlock"] {
+    gap: 15px !important;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4ECDC4;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FF6B6B;
+}
+
+/* Code Block Styling */
+[data-testid="stCodeBlock"] {
+    background-color: #1e1e1e !important;
+    border-radius: 8px !important;
+    border: 1px solid #4ECDC4 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    button[kind="primary"] {
+        width: 100% !important;
+    }
+}
