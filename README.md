@@ -1,4 +1,4 @@
-# ai-ml-playground
+# Ai-ml-playground
 
 A simple learning playground where I practiced Python, data analysis, and machine learning step by step.
 
@@ -15,9 +15,9 @@ A simple learning playground where I practiced Python, data analysis, and machin
 - Learned how to inspect data, clean it, and visualize patterns.
 - Basic stats idea:
 
-```math
-μ = Σx / n
-```
+  $$
+  \mu = \frac{\Sigma x}{n}
+  $$
 
 ### 3. Pandas and visualization
 
@@ -29,9 +29,9 @@ A simple learning playground where I practiced Python, data analysis, and machin
 - Built regression models to predict values.
 - Simple formula:
 
-```math
-y = mx + b
-```
+  $$
+  y = mx + b
+  $$
 
 - Applied this in car price prediction and insurance cost prediction.
 
@@ -41,9 +41,9 @@ y = mx + b
 - Used logistic regression for heart disease prediction.
 - Formula:
 
-```math
-p = \frac{1}{1 + e^{-z}}
-```
+  $$
+  p = \frac{1}{1 + e^{-z}}
+  $$
 
 ### 6. Model tuning
 
