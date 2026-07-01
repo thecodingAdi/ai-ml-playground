@@ -13,7 +13,11 @@ A simple learning playground where I practiced Python, data analysis, and machin
 
 - Worked with CSV files and explored real datasets.
 - Learned how to inspect data, clean it, and visualize patterns.
-- Basic stats idea: mean = Σx / n
+- Basic stats idea:
+
+```math
+μ = Σx / n
+```
 
 ### 3. Pandas and visualization
 
@@ -23,14 +27,23 @@ A simple learning playground where I practiced Python, data analysis, and machin
 ### 4. Machine learning basics
 
 - Built regression models to predict values.
-- Simple formula: y = mx + b
+- Simple formula:
+
+```math
+y = mx + b
+```
+
 - Applied this in car price prediction and insurance cost prediction.
 
 ### 5. Classification models
 
 - Learned how classification predicts categories like yes/no.
 - Used logistic regression for heart disease prediction.
-- Formula: p = 1 / (1 + e^-z)
+- Formula:
+
+```math
+p = \frac{1}{1 + e^{-z}}
+```
 
 ### 6. Model tuning
 
